@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main()
+{
+	int a[] = {1,1,2,3,3,3,4,5};
+	int i, j, max;
+	int bucket[20] = {0};
+	for(i = 0; i<8; i++)
+		{
+		j = a[i];
+		bucket[j]++;
+		}
+	max = bucket[0]; 
+	for(i = 0; i<7; i++)
+	{
+		if(max<bucket[i])
+		max = bucket[i];
+		
+    }
+    printf("%d", max);
+    return 0;
+}
